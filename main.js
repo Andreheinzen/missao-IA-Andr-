@@ -1,8 +1,10 @@
 
 
-
-
-
+const caixaPrincipal = document.querySelector(".caixa-principal");
+const caixaPerguntas = document.querySelector(".caixa-perguntas");
+const caixaAlternativas = document.querySelector(".caixa-alternativas")
+const caixaResultado = document.querySelector(".caixa-resultado")
+const textoResultado = document.querySelector(".texto-resultado")
 const perguntas = [
     {
         enunciado: "Ao ser convidado para uma festa, qual é a reação comum?",
@@ -70,3 +72,13 @@ const perguntas = [
         ]
     },
 ];
+
+let atual = 0;
+let perguntaAtual;
+
+function mostraPergunta(){
+  perguntaAtual = perguntas[atual];
+  caixaPerguntas.textContent = perguntaAtual.enunciado
+}
+
+mostraPergunta
