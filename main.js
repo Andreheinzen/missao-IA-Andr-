@@ -76,6 +76,7 @@ const perguntas = [
 let atual = 0;
 let perguntaAtual;
 let historiaFinal
+
 function mostraPergunta(){
  if(atual>= perguntas.length){
    mostraResultado()
@@ -102,7 +103,7 @@ function mostraAlternativas(){
 
 function respostaSelecionada(opcaoSelecionada){
     const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal
+    historiaFinal += afirmacoes + " ";
     atual++
     mostraPergunta();
 
